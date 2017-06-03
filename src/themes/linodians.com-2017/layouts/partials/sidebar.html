@@ -1,0 +1,15 @@
+<nav id="sidebar">
+{{ $mainSection := .Site.GetPage "section" .Section }}
+<ul class="tl">
+{{ range $mainSection.Sections }}
+	<li>
+		<a href="#">{{ .Title }}<i class="fa fa-caret-right fa-fw"></i></a>
+		<ul>
+		{{ range .Pages }}
+			<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+		{{ end }}
+		</ul>
+	</li>
+{{ end }}
+</ul>
+</nav>

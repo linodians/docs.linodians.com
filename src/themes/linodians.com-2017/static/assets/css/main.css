@@ -1,0 +1,245 @@
+/* ----------------------------------------------------------------------------
+ *  Table of Contents
+ * ----------------------------------------------------------------------------
+ * # Structure
+ * # Typography
+ * # Content
+ * # Elements
+ * # Generic Classes
+ * --------------------------------------------------------------------------*/
+
+/* Font colors belong in the typography section meanwhile background colors will be in structure or elements, depending on what they're for.*/
+
+/************************************************
+ * Structure
+ * *********************************************/
+html,
+body{
+	min-height: 100%;
+}
+
+html{
+	box-sizing: border-box;
+}
+	*,
+	*:before,
+	*:after{
+		box-sizing: inherit;
+	}
+
+body{
+}
+
+body > header{
+	background-color: #2F9260;
+}
+	body > header nav{
+		display: flex;
+		padding: 0 15px;
+		height: 55px;
+		line-height: 55px;
+	}
+		body > header .logo{
+			flex-grow: 0;
+			width: 200px;
+		}
+			body > header .logo img{
+				padding-right: 10px;
+				height: 30px;
+				vertical-align: middle;
+			}
+
+		body > header ul{
+			flex-grow: 1;
+			display: flex;
+			margin: 0;
+		}
+			body > header li{
+				padding: 0 10px;
+				height: 55px;
+				list-style-type: none;
+			}
+
+		body > header input[type="search"]{
+			width: 200px;
+			height: 30px;
+		}
+
+#page{
+	display: flex;
+}
+	#sidebar{
+		background-color: #e8ede8;
+		padding: 5px 10px;
+		width: 300px;
+	}
+		#sidebar ul{
+			list-style: none;
+		}
+			#sidebar ul a{
+				display: block;
+			}
+				#sidebar ul a i{
+					float: right;
+				}
+
+		#sidebar ul.tl{
+			padding: 0;
+		}
+			#sidebar ul.tl li ul{
+				display: none;
+			}
+				#sidebar ul.tl li.shown ul{
+					display: block;
+				}
+
+	main{
+		padding: 5px 10px;
+		width: 100%;
+	}
+
+
+
+/************************************************
+ * Typography
+ * *********************************************/
+html{
+	font-size: 62.5%;
+}
+
+body{
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+body > header{
+	font-size: 1.6rem;
+}
+	body > header,
+	body > header a{
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+
+	body > header .logo{
+		font-family: "Baloo", sans-serif;
+		font-size: 2.1rem;
+	}
+		body > header .logo .subtitle{
+			opacity: 0.7;
+		}
+	
+	body > header ul .active{
+		font-weight: bold;
+	}
+
+#sidebar ul a{
+	color: #333333;
+	text-decoration: none;
+}
+	#sidebar ul a:hover{
+		color: #2F9260;
+	}
+
+
+
+/************************************************
+ * Content
+ * *********************************************/
+/* All Content Types */
+main .content a{
+	color: #0000FF;
+	text-decoration: underline;
+}
+
+main blockquote{
+	border-left: 3px solid #000000;
+	padding-left: 20px;
+	font-size: larger;
+	font-style: italic;
+}
+
+main form{
+}
+	main form label{
+		display: inline-block;
+		width: 15%;
+		min-width: 60px;
+	}
+
+	main form input[type=email],
+	main form input[type=text]{
+		margin-bottom: 10px;
+	}
+
+main h1,
+main h1 a{
+	color: #333333;
+}
+
+main hr{
+	border: 0;
+	background-color: #CCC;
+	height: 1px;
+}
+
+main img{
+	max-width: 100%;
+}
+	main figcaption{
+		color: #777777;
+		text-align: center;
+		font-style: italic;
+	}
+
+main pre{
+	margin-bottom: 1.6em;
+	background: #EEE;
+	padding: 1.6em;
+	max-width: 100%;
+	line-height: 1.6;
+	overflow: auto;
+	font-family: Courier, monospace;
+	font-size: 1.5rem;
+}
+
+/* Section - Blog */
+main article{
+	margin-top: 30px;
+	border-top: 1px dotted #DDDDDD;
+	padding-top: 20px;
+}
+
+/* Section - Projects */
+body.section-projects .project{
+}
+
+
+
+/************************************************
+ * Elements
+ * *********************************************/
+
+
+
+/************************************************
+ * Generic Classes
+ * *********************************************/
+.alignleft{
+	float: left;
+	margin-right: 1.5rem;
+}
+
+.aligncenter{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	clear: both;
+}
+
+.alignright{
+	float: right;
+	margin-left: 1.5rem;
+}

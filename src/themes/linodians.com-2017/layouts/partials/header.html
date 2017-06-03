@@ -1,0 +1,15 @@
+<header>
+	<nav>
+		<a class="logo" href="/"><img src="{{ "assets/img/logo-icon.svg" | relURL }}" alt="{{ .Site.Title }} Logo" />Linodians <span class="subtitle">Docs</span></a>
+		<ul>
+			{{ $currentNode := . }}
+			{{ range .Site.Menus.main }}
+				<li><a class="{{ if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a></li>
+			{{ end }}
+		</ul>
+		{{ if .IsHome }}{{ partial "github-corner" . }}{{ end }}
+		<form>
+			<input type="search" name="header-search-box" placeholder="Search docs" />
+		</form>
+	</nav>
+</header>

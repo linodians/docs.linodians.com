@@ -1,0 +1,45 @@
+/* Rules without a media query present take affect when the webpage is 1,100px or
+less. */
+
+
+main{
+}
+
+
+/************************************************
+ * <= 900px width
+ * *********************************************/
+@media(max-width: 900px){
+
+	main{
+	}
+
+	body > header div.social-icons{
+	}
+
+	body > header a.toggle{
+	}
+
+	body > header ul{
+	}
+		body > header li{
+		}
+
+		}
+}
+
+
+/************************************************
+ * <= 700px width
+ * *********************************************/
+@media(max-width: 700px){
+
+}
+
+
+/************************************************
+ * <= 400px width
+ * *********************************************/
+@media(max-width: 400px){
+
+}

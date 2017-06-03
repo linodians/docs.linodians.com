@@ -1,0 +1,33 @@
+baseURL = "https://docs.linodians.com/"
+languageCode = "en-us"
+title = "Linodians Docs"
+
+theme = "linodians.com-2017"
+
+enableEmoji = true
+
+[blackfriday]
+	hrefTargetBlank	=	true
+
+[[menu.main]]
+	name	= "Home"
+	url		= "/"
+	weight	= -1
+
+[[menu.main]]
+	name	= "Guides"
+	url		= "/guides/"
+	weight	= 5
+
+[[menu.main]]
+	name	= "Reference"
+	url		= "/reference/"
+	weight	= 10
+
+[[menu.main]]
+	name	= "Contribute"
+	url		= "/contribute/"
+	weight	= 15
+
+[social]
+	twitter = "FelicianoTech"

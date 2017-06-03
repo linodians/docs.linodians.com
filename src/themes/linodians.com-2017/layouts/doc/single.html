@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main class="single">
+	<div id="{{ .UniqueID }}" class="doc">
+		<header>
+			<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+			<span class="posted-on">Posted on <time datetime="{{ .Date }}">{{ dateFormat "January 2, 2006"  .Date }}</time></span>
+		</header>
+		{{ if .Params.feature }}
+			<div class="feature"><img src="/assets/img/feature/{{ .Params.feature }}" alt="" /></div>
+		{{ end }}
+		<div class="content">
+			{{ .Content }}
+		</div>
+	</div>
+</main>
+{{ end }}
